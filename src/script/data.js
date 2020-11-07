@@ -20,8 +20,7 @@
  *    lamaPengobatan: String
  * }
  */
-
-module.export = [
+var tanamans = [
   {
     id: 1,
     nama: "Alang-Alang",
@@ -115,3 +114,5 @@ module.export = [
     lamaPengobatan: null,
   },
 ];
+
+export default tanamans;
