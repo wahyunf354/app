@@ -30,6 +30,7 @@ Ikuti langkah-langkah berikut
 ---
 
 - [x] Menambahkan data lebih banya lagi
-- [ ] Pembuatan Layout Tampilan Aplikasi
+- [x] Pembuatan Layout Tampilan Aplikasi
+- [ ] Menambah data
 - [ ] Menampilkan data pada Layout
 - [ ] Menerapkan Algoritma Brute Force
