@@ -113,6 +113,118 @@ var tanamans = [
     caraPemakaian: null,
     lamaPengobatan: null,
   },
+  {
+    id: 4,
+    nama: "Bawang Putih",
+    namaLatin: "Allium sativum Linn",
+    imgUrl: "../img/bawang-putih.jpg",
+    desc:
+      "Tumbuhan berumpun yang bersiung-siung, tiap siung terbungkus dengan kulit tipis. Daunnya berbentuk pita dan berakar serabut. Bunganya berwarna putih.",
+    habitat: "Ditanam di daerah pegunungan yang cukup mendapat sinar matahari.",
+    caraBudidaya: null,
+    namaDaerah: [
+      "Bawang bodas",
+      "Bawang handal",
+      "Bawang Basikong",
+      "Bawang puteh",
+      "Bawang putek",
+    ],
+    bagianYangMenjadiObat: ["umbi lapis"],
+    ujiKlinik: null,
+    khasiat: "Obat cacing, Tekanan darah tinggi ",
+    komposisi: null,
+    ramuan: [
+      "Obat Cacing: Bawang putih 2 g; Rimpang temugiring 4 g; Air matang 2 sendok makan, Dipipis, Diminum 1 kali sehari 1 sendok makan; diulang selama 4 hari.",
+      "Tekanan darah tinggi:  Induk umbi bawang putih 2 buah; Daun seledri segar 75 g; Air matang secukupnya, Dipipis, Diminum sehari 2 kali; 1/4 cangkir.",
+      "Asma; Bronkhitis; Selesma: Bawang putih 5 g; Kayu mesoyi 1 g; Herba patikan kebo 2 g; Adas 1 g; Kapulaga 3 g; Air 110, Ditumbuk kemudian tambahkan air; diperas kemudian disaring; dididihkan, Diminum 2 kali sehari; tiap kali 100 ml; diulang sampai sembuh; untuk pemeliharaan cukup 2 hari sekali 100 ml.",
+    ],
+    caraPemakaian: null,
+    lamaPengobatan: null,
+  },
+  {
+    id: 5,
+    nama: "Bawang Merah",
+    namaLatin: "Allium cepa L",
+    khasiat: "Batuk, Kencing Manis, Demam",
+    imgUrl: "../img/bawangMerah.jpg",
+    ramuan: [
+      "Batuk: Umbi bawang merah 4 g; Daun poko 4 g; Daun sembung 3 g; Daun pegagan 4 g; Buah adas 2 g; Air 125 ml, Dipipis, dibuat pil atau direbus, Diminum sehari 1 kali, pagi hari 100 ml, dipipis diminum 1 kali sehari 1/4 cangkir, pil, diminum 3 kali sehari 9 pil. ",
+      "Kencing manis: Umbi bawang merah (dirajang) 4 g; Buah buncis (dirajang) 15 g; Daun salam (dirajang) 120 ml, Direbus, Diminum 1 kali sehari 100 ml. ",
+      "Demam: Umbi bawang merah (potong tipis) secukupnya; Minyak kelapa secukupnya; Minyak kayu putih secukupnya, Diremas-remas, Minyak tersebut dioleskan pada perut yang kembung, seluruh badan, kaki, dan tangan pada anak yang demam.",
+    ],
+  },
+  {
+    id: 6,
+    nama: "Daun Sirih",
+    namaLatin: "Piperbetie L.",
+    khasiat:
+      "Kaki Bengkak, Keputihan, Malaria, Mulut Bau, Nyeri Sendi, Mimisan(Pendarahan Hidung), Radang Mulut, Batuk",
+    imgUrl: "../img/daunSirih.jpg",
+    ramuan: [
+      "Kaki bengkak: Daun sirih 2 helai; Cabai jawa 3 buah; Lempuyang emprit 1 rimpang; Beras sedikit; Air sedikit; Arak secukupnya, Ramuan dihaluskan dengan bantuan sedikit air; kemudian ditambah arak secukupnya, Digosokkan pada kaki yang bengkak sebelum tidur.",
+      "Keputihan: Daun sirih 2 helai; Daun Jambu biji 5 helai; Air 210 ml, Dibuat infus, Dicebokkan 2 kali sehari. ",
+      "Malaria: Daun sirih segar 20 helai; Daun sembung 20 helai; Daun asam 1 genggam; Daun beluntas 20 helai; Kulit kayu pulai 3 jari tangan; Air 2 panci, Dididihkan, Uapnya digunakan untuk mandi ukub(mandi uap). ",
+      "Napas/mulut bau: Daun sirih 3 g; Air 110 ml, Dibuat infus, Untuk berkumur 2 kali sehari; tiap kali pakai 50 ml. ",
+      "Nyeri sendi: Buah sirih 5 butir; Lempuyang emprit 1 rimpang; Ragi secukupnya, Dihaluskan ditambahan arak, Digosokkan pada tempat yang nyeri. ",
+      "Pendarahan hidung(mimisan): Daun sirih, Diremas dan digulung, Dimasukkan ke dalam hidung. ",
+      "Radang mulut: Daun sirih 2 helai; Air 110 ml, Dibuat infus, Untuk berkumur 2 kali sehari; tiap kali pakai 100 ml",
+      "Batuk: Daun sirih 2 g; Buah kapulaga 1 g; air 110 ml, Dibuat infus atau diseduh, Diminum 1 kali sehari 100 ml.",
+    ],
+  },
+  {
+    id: 7,
+    nama: "Jeruk Nipis",
+    namaLatin: "Citrus aurantifolia (christm)suringle",
+    khasiat: "Batuk, Demam, Nyeri Tenggorokan, Nyeri Haid",
+    ramuan: [
+      "Batuk: Jeruk nipis(peras)1 buah; Kecap/madu sama banyak dengan perasan jeruk nipis, Dicampur hingga rata, Diminum sehari 2 kali; pagi dan sore; tiap kali minum 1 ramuan.",
+      "Demam: Daun jeruk nipis segar 5 helai; daun sembung segar 3 helai; Daun prasman segar 5 helai; Air 115 ml, Diseduh atau dipipis, Diminum 1 hari sekali 100 ml; apabila dipipis diminum 1 hari sekali 1/4 cangkir; diulang selama 4 hari. ",
+      "Nyeri tenggorokan: Jeruk nipis 1 iris; Kapur sirih sedikit, Jeruk nipis diolesi kapur sirih kemudian dipanaskan di atas api kecil lalu peras, Diminum 2 kali sehari 1 ramuan; diulangi selama 3 hari. ",
+      "Nyeri haid: Jeruk nipis 1 buah; Kapur sirih 2 jari; minyak kayu putih secukupnya, Peras buah jeruk nipis; kemudian tambahkan kapur sirih dan minyak kayu putih kemudian diaduk sampai tercampur, Dioleskan pada perut.",
+    ],
+  },
+  {
+    id: 8,
+    nama: "Jambu Biji",
+    namaLatin: "Psidium guajava",
+    khasiat: "Disentri, Mencret",
+    ramuan: [
+      "Disentri: Daun jambu biji 6 g; Kayu secang 1 g; Rasuk angin 1 g; Daun patikan cina 5 g; daun pegagan 7 g; Kayu ules 2 buah; Bawang merah 1 umbi; Air 120 ml, Dibuat infus, Diminum 2 kali sehari; pagi dan sore; tiap kali minum 100 ml; diulang selama 4 hari. ",
+      "Mencret: Daun jambu biji muda 9 helai; Kunyit 1 jari; Biji kedawung (disangrai)4 butir; Rasuk angin 4 g; Air 110 ml, Dibuat infus, Diminum 2 kali sehari; pagi dan sore; tiap kali minum 100 ml; diulang selama 4 hari.",
+    ],
+  },
+  {
+    id: 9,
+    nama: "Kuyit",
+    namaLatin: "Curcuma domestica",
+    khasiat: "Luka, Kurap, Mencret, Nyeri Haid, Sakit Perut",
+    ramuan: [
+      "Luka dan kurap : Rimpang kunyit 1 jari; Daun asam 1 genggam; Air sedikit, Dipipis, Tempelkan pada luka dan diganti setiap 3 jam. ",
+      "Mencret : Rimpang kunyit 1/2 jari; Rasuk angin 1/2 sendok teh; Ketumbar 3 biji; Buah kayu ules 1 biji; daun trawas 1 helai, Campuran ditumbuk; ditambah air 115 ml dan dididihkan; kemudian disaring, Diminum pagi dan sore; tiap kali minum 100 ml. ",
+      "Nyeri haid : Rimpang kunyit 1 jari; Ketumbar 7 butir; Cengkih 1 butir; Asam kawak; Biji pala, Campuran ditumbuk; ditambah air 110 ml; dan dididihkan; kemudian disaring, Diminum 1 kali sehari 100 ml. ",
+      "Sakit perut : Kunyit dibakar 1 jari; Kulit batang pulosari 1 jari; Ketumbar 7 biji; Seluruh tanaman patikan cina 1 genggam; Air 1 cangkir, Campuran ditumbuk; ditambah air dan dididihkan sampai diperoleh secangkir; disaring, Bayi umur 5-7 bulan; 1 sendok teh/jam; Anak umur 1-2 tahun; diminum 2 kali sehari; 2 sendok makan; Dewasa; sehari minum 3 kali; 1/2 cangkir.",
+    ],
+  },
+  {
+    id: 10,
+    nama: "Kumis Kucing",
+    namaLatin: "Orthosiphon stamineus Benth",
+  },
+  {
+    id: 11,
+    nama: "Kemangi",
+    namaLatin: "Ocimum basilicum L",
+  },
+  {
+    id: 12,
+    nama: "Kayu Manis",
+    namaLatin: "Cynamomum aromaticum Nees",
+  },
+  {
+    id: 13,
+    nama: "Lidah Buaya",
+    namaLatin: "Aloe vera Linn",
+  },
 ];
 
 export default tanamans;
