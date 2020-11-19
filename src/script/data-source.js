@@ -13,9 +13,12 @@ function bruteForce(array, keyword) {
 class DataSource {
   static searchTanaman(keyword) {
     return new Promise((resolve, reject) => {
-      const filteredTanamans = tanamans.filter((tanaman) =>
-        tanaman.nama.toUpperCase().includes(keyword.toUpperCase())
+      const filteredTanamans = tanamans.filter(
+        (tanaman) =>
+          tanaman.nama.toUpperCase().includes(keyword.toUpperCase()) ||
+          tanaman.khasiat.toUpperCase().includes(keyword.toUpperCase())
       );
+
       if (filteredTanamans.length) {
         resolve(filteredTanamans);
       } else {
