@@ -176,6 +176,7 @@ var tanamans = [
     nama: "Jeruk Nipis",
     namaLatin: "Citrus aurantifolia (christm)suringle",
     khasiat: "Batuk, Demam, Nyeri Tenggorokan, Nyeri Haid",
+    imgUrl: "../img/jerukNipis.jpg",
     ramuan: [
       "Batuk: Jeruk nipis(peras)1 buah; Kecap/madu sama banyak dengan perasan jeruk nipis, Dicampur hingga rata, Diminum sehari 2 kali; pagi dan sore; tiap kali minum 1 ramuan.",
       "Demam: Daun jeruk nipis segar 5 helai; daun sembung segar 3 helai; Daun prasman segar 5 helai; Air 115 ml, Diseduh atau dipipis, Diminum 1 hari sekali 100 ml; apabila dipipis diminum 1 hari sekali 1/4 cangkir; diulang selama 4 hari. ",
@@ -188,6 +189,7 @@ var tanamans = [
     nama: "Jambu Biji",
     namaLatin: "Psidium guajava",
     khasiat: "Disentri, Mencret",
+    imgUrl: "../img/jambu.jpg",
     ramuan: [
       "Disentri: Daun jambu biji 6 g; Kayu secang 1 g; Rasuk angin 1 g; Daun patikan cina 5 g; daun pegagan 7 g; Kayu ules 2 buah; Bawang merah 1 umbi; Air 120 ml, Dibuat infus, Diminum 2 kali sehari; pagi dan sore; tiap kali minum 100 ml; diulang selama 4 hari. ",
       "Mencret: Daun jambu biji muda 9 helai; Kunyit 1 jari; Biji kedawung (disangrai)4 butir; Rasuk angin 4 g; Air 110 ml, Dibuat infus, Diminum 2 kali sehari; pagi dan sore; tiap kali minum 100 ml; diulang selama 4 hari.",
@@ -197,6 +199,7 @@ var tanamans = [
     id: 9,
     nama: "Kuyit",
     namaLatin: "Curcuma domestica",
+    imgUrl: "../img/kuyit.png",
     khasiat: "Luka, Kurap, Mencret, Nyeri Haid, Sakit Perut",
     ramuan: [
       "Luka dan kurap : Rimpang kunyit 1 jari; Daun asam 1 genggam; Air sedikit, Dipipis, Tempelkan pada luka dan diganti setiap 3 jam. ",
@@ -208,22 +211,47 @@ var tanamans = [
   {
     id: 10,
     nama: "Kumis Kucing",
+    imgUrl: "../img/kumisKucing.png",
     namaLatin: "Orthosiphon stamineus Benth",
+    khasiat: "Susah Kencing, Batu Ginjal, Kencing Manis, Sakit Pinggang",
+    ramuan: [
+      "Susah kencing : Daun kumis kucing segar 1/4 genggam; Air 1 gelas, Direbus hingga memperoleh cairan 1/2 gelas, Diminum setiap hari 2 kali dan tiap kali minum 1/2 gelas. ",
+      "Batu ginjal : Herba kumis kucing 6 g; Herba meniran 7 pohon; Air 110 ml, Dibuat infus, Diminum 2 kali sehari; tiap kali minum 100 ml.",
+      "Kencing manis : Daun kumis kucing 20 helai; Daun sambiloto 20 helai; Air 110 ml, Dibuat infus, Diminum 1 kali sehari; 100 ml. ",
+      "Sakit pinggang : Daun kumis kucing segar 1 genggam; Kulit batang pepaya seluas 4 cm2; Air 110 ml, Dibuat infus, Diminum 1 kali sehari 100 ml.",
+    ],
   },
   {
     id: 11,
     nama: "Kemangi",
     namaLatin: "Ocimum basilicum L",
+    imgUrl: "../img/kemangi.png",
+    khasiat: "Perut KemBung",
+    ramuan: [
+      "Perut kembung : Daun kemangi secukupnya, Dicuci bersih, Dimakan sebagai lalapan.",
+    ],
   },
   {
     id: 12,
     nama: "Kayu Manis",
     namaLatin: "Cynamomum aromaticum Nees",
+    imgUrl: "../img/kayuManis.jpg",
+    khasiat: "Mencret",
+    ramuan: [
+      "Mencret : Kayu manis(Padang)3 g; Buah kayu ules 2 g; Rasuk angin 2 g; Rimpang kencur segar 8 g; Ketumbar 3 g; Jintan hitam 2 g; Mungsi 2 g; Rimpang lempuyang 10 g; Pulosari 2 g; Buah adas 2 g; Biji kedaung 4 butir; Air sedikit, Dipipis hingga menjadi pasta, Ditapalkan di seluruh bagian perut; dan pakailah gurita. ",
+    ],
   },
   {
     id: 13,
     nama: "Lidah Buaya",
     namaLatin: "Aloe vera Linn",
+    imgUrl: "../img/lidahBuaya.jpg",
+    khasiat:
+      "Luka terbakar dan tersiram air panas (yang ringan), Penyubur rambut",
+    ramuan: [
+      "Penyubur rambut: Daun lidah buaya segar secukupnya dibelah, diambil bagian dalam yang rupanya seperti agar-agar, digosokkan ke kulit kepala sesudah mandi sore, kemudian dibungkus dengan kain, keesokan harinya rambut dicuci. Dipakai setiap hari selama 3 bulan untuk mencapai hasil yang memuaskan.",
+      "Luka terbakar dan tersiram air panas (yang ringan): Daun dicuci bersih, ambil bagian dalamnya, tempelkan pada bagian tubuh yang terkena api/air panas. c. Bisul: Daun dilumatkan ditambah sedikit garam, tempelkan pada bisulnya.",
+    ],
   },
 ];
 

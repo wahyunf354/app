@@ -11,7 +11,7 @@ Apalaki berbasis web sederhana yang digunakan untuk mencari tanaman obat secara 
 ---
 
 Kunjungi Link:
-[Comming Soon]()
+[Klik](https://cariherbal.vercel.app/)
 
 ## How to contribute
 
@@ -31,6 +31,6 @@ Ikuti langkah-langkah berikut
 
 - [x] Menambahkan data lebih banya lagi
 - [x] Pembuatan Layout Tampilan Aplikasi
-- [ ] Menambah data
+- [x] Menambah data
 - [ ] Menampilkan data pada Layout
-- [ ] Menerapkan Algoritma Brute Force
+- [x] Menerapkan Algoritma Brute Force
