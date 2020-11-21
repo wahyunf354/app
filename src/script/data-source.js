@@ -1,13 +1,24 @@
 import tanamans from "./data.js";
 
-function bruteForce(array, keyword) {
-  let result = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].nama.toUpperCase() === keyword.toUpperCase()) {
-      result.push(array[i]);
+function bruteForce(text, keyword) {
+  const arrText = text.split('');
+  const arrKeyword = keyword.split('');
+
+  for(let i = 0; i < arrText.length; i++) {
+    let temp = [];
+    for (let j = 0; j < arrKeyword.length; j++) {
+      if (arrText[i + j] != arrKeyword[j]) {
+        break;
+      } else {
+        temp.push(1);
+      }
+    }
+
+    if(temp.length == arrKeyword.length) {
+      return true
     }
   }
-  return result;
+  return false
 }
 
 class DataSource {
@@ -15,8 +26,8 @@ class DataSource {
     return new Promise((resolve, reject) => {
       const filteredTanamans = tanamans.filter(
         (tanaman) =>
-          tanaman.nama.toUpperCase().includes(keyword.toUpperCase()) ||
-          tanaman.khasiat.toUpperCase().includes(keyword.toUpperCase())
+        bruteForce(tanaman.nama.toUpperCase(), keyword.toUpperCase()) ||
+        bruteForce(tanaman.khasiat.toUpperCase(), keyword.toUpperCase())
       );
 
       if (filteredTanamans.length) {
@@ -27,5 +38,7 @@ class DataSource {
     });
   }
 }
+
+console.log(bruteForce('ikan bakar', "ud"))
 
 export default DataSource;
