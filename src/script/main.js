@@ -3,11 +3,20 @@ import DataSource from "./data-source.js";
 document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.querySelector("#searchButtonElement");
   const searchElement = document.querySelector("#searchElement");
+  const radioBerdasarkan = document.getElementsByName('berdasarkan');
+
+  let berdasarkan = "tanaman"; 
+  radioBerdasarkan.forEach(e => {
+    e.addEventListener('click', (e) => {
+      berdasarkan = e.target.value;
+    })
+  })
 
   const onSearchButtonClicked = () => {
     const listTanaman = document.querySelector(".list-tanaman");
 
-    DataSource.searchTanaman(searchElement.value)
+    console.log(berdasarkan)
+    DataSource.searchTanaman(searchElement.value, berdasarkan)
       .then((results) => {
         listTanaman.innerHTML = "";
 
@@ -15,14 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const itemTanaman = document.createElement("div");
           itemTanaman.setAttribute("class", "item-tanaman");
           itemTanaman.innerHTML = `
-                <div class="card  shadow-lg">
                   <img src="/src/img/${
                     result.imgUrl
-                  }" class="card-img-top rounded" style="width: 100%;"
-                       alt="...">
+                  }" class="card-img-top rounded">
                   <div class="card-body">
-                    <h2 class="card-title display-1">${result.nama}</h2>
-                    <p class="card-subtitle mb-2 text-muted h1" style="color: #bbb">${
+                    <h2 class="card-title">${result.nama}</h2>
+                    <p class="card-subtitle mb-2 text-muted " style="color: #bbb">${
                       result.namaLatin
                     }</p>
                     <p class="card-text">
@@ -31,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       )}
                     </p>
                   </div>
-                </div>
+                
                 `;
           listTanaman.appendChild(itemTanaman);
         });

@@ -22,13 +22,20 @@ function bruteForce(text, keyword) {
 }
 
 class DataSource {
-  static searchTanaman(keyword) {
+  static searchTanaman(keyword, berdasarkan) {
     return new Promise((resolve, reject) => {
-      const filteredTanamans = tanamans.filter(
+      let filteredTanamans = [];
+      if (berdasarkan == 'penyakit') {
+        filteredTanamans = tanamans.filter(
         (tanaman) =>
-        bruteForce(tanaman.nama.toUpperCase(), keyword.toUpperCase()) ||
-        bruteForce(tanaman.khasiat.toUpperCase(), keyword.toUpperCase())
-      );
+          bruteForce(tanaman.khasiat.toUpperCase(), keyword.toUpperCase())
+        );
+      } else if (berdasarkan == 'tanaman') {
+        filteredTanamans = tanamans.filter(
+          (tanaman) =>
+            bruteForce(tanaman.nama.toUpperCase(), keyword.toUpperCase())
+        );
+      }
 
       if (filteredTanamans.length) {
         resolve(filteredTanamans);
