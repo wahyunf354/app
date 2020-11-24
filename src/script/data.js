@@ -20,6 +20,7 @@
  *    lamaPengobatan: String
  * }
  */
+
 var tanamans = [
   {
     id: 1,

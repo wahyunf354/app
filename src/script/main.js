@@ -24,22 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
           const itemTanaman = document.createElement("div");
           itemTanaman.setAttribute("class", "item-tanaman");
           itemTanaman.innerHTML = `
-                  <img src="/src/img/${
-                    result.imgUrl
-                  }" class="card-img-top rounded">
-                  <div class="card-body">
-                    <h2 class="card-title">${result.nama}</h2>
-                    <p class="card-subtitle mb-2 text-muted " style="color: #bbb">${
-                      result.namaLatin
-                    }</p>
-                    <p class="card-text">
-                      ${result.ramuan.reduce(
-                        (acc, cv) => acc + "<br><br>" + cv
-                      )}
-                    </p>
+                  <h5 data-toggle="modal" data-target="#modal-${result.id}">${result.nama}</h5>
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal-${result.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="card-title">${result.nama}</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <img src="/src/img/${result.imgUrl}" class="card-img-top" alt="${result.name}">
+                        <div class="card-body">
+                          <p class="card-text">
+                            ${result.ramuan.reduce((acc, cv) => acc + "<br> <br>" + cv)}
+                          </p>
+                        </div>
+                      
+                      </div>
+                    </div>
                   </div>
-                
-                `;
+                  `;
           listTanaman.appendChild(itemTanaman);
         });
       })
