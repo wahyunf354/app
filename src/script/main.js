@@ -9,8 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
   radioBerdasarkan.forEach(e => {
     e.addEventListener('click', (e) => {
       berdasarkan = e.target.value;
+      if (berdasarkan == 'penyakit') {
+        searchElement.placeholder = "Ketik nama penyakit"
+      } else {
+        searchElement.placeholder = "Ketik nama tanaman"
+      }
     })
   })
+
 
   const onSearchButtonClicked = () => {
     const listTanaman = document.querySelector(".list-tanaman");
