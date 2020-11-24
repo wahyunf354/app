@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <h5 data-toggle="modal" data-target="#modal-${result.id}">${result.nama}</h5>
                   <!-- Modal -->
                   <div class="modal fade" id="modal-${result.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-scrollable">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="card-title">${result.nama}</h5>
@@ -35,13 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
+                        <div class="modal-body">
                         <img src="/src/img/${result.imgUrl}" class="card-img-top" alt="${result.name}">
                         <div class="card-body">
                           <p class="card-text">
                             ${result.ramuan.reduce((acc, cv) => acc + "<br> <br>" + cv)}
                           </p>
                         </div>
-                      
+                        </div>    
                       </div>
                     </div>
                   </div>
