@@ -15,7 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
           const itemTanaman = document.createElement("div");
           itemTanaman.setAttribute("class", "item-tanaman");
           itemTanaman.innerHTML = `
-                  <h5 data-toggle="modal" data-target="#exampleModal">${result.nama}</h5>
+                  <h5 data-toggle="modal" data-target="#modal-${result.id}">${result.nama}</h5>
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal-${result.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="card-title">${result.nama}</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <img src="/src/img/${result.imgUrl}" class="card-img-top" alt="${result.name}">
+                        <div class="card-body">
+                          <p class="card-text">
+                            ${result.ramuan.reduce((acc, cv) => acc + "<br> <br>" + cv)}
+                          </p>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
                   `;
           listTanaman.appendChild(itemTanaman);
         });
@@ -24,28 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         listTanaman.innerHTML = message;
       });
   };
-
-  const displayModal = (data) => {
-    const html = ` <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <img src="/src/img/${data.imgUrl}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${data.nama}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        
-        </div>
-      </div>
-    </div>` 
-    return html;
-  }
 
   searchElement.addEventListener("keyup", onSearchButtonClicked);
   searchButton.addEventListener("click", onSearchButtonClicked);
