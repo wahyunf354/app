@@ -60,15 +60,28 @@ main {
   font-weight: normal;
 }
 
+button:focus,
+button:active {
+  outline: 0 !important;
+  outline-style: none !important;
+  outline-width: 0 !important;
+  border: 0 !important;
+}
+
 .search-container > button {
   width: 23%;
   cursor: pointer;
   margin-left: auto;
   padding: 16px;
-  background-color: rgb(65, 158, 11);
-  color: white;
+  color: rgb(65, 158, 11);
+  background-color: white;
   border: 0;
+  transition: 500ms;
   text-transform: uppercase;
+}
+
+.search-container > button:hover {
+  transform: scale(1.5);
 }
 
 .item-tanaman {
@@ -92,8 +105,9 @@ main {
 
 @media screen and (max-width: 550px) {
   .search-container {
-    flex-direction: column;
     position: static;
+    display: grid;
+    grid-template-columns: auto 50px;
   }
 
   .search-container > input {
@@ -103,5 +117,9 @@ main {
 
   .search-container > button {
     width: 100%;
+  }
+
+  .search-container > button:hover {
+    transform: scale(1.1);
   }
 }
