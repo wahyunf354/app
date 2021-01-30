@@ -3,35 +3,34 @@ import DataSource from "./data-source.js";
 document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.querySelector("#searchButtonElement");
   const searchElement = document.querySelector("#searchElement");
-  const radioBerdasarkan = document.getElementsByName('berdasarkan');
-
-  let berdasarkan = "tanaman"; 
-  radioBerdasarkan.forEach(e => {
-    e.addEventListener('click', (e) => {
-      berdasarkan = e.target.value;
-      if (berdasarkan == 'penyakit') {
-        searchElement.placeholder = "Ketik nama penyakit"
-      } else {
-        searchElement.placeholder = "Ketik nama tanaman"
-      }
-    })
-  })
-
 
   const onSearchButtonClicked = () => {
     const listTanaman = document.querySelector(".list-tanaman");
 
-    DataSource.searchTanaman(searchElement.value, berdasarkan)
+    DataSource.searchTanaman(searchElement.value)
       .then((results) => {
         listTanaman.innerHTML = "";
 
         results.forEach((result) => {
           const itemTanaman = document.createElement("div");
-          itemTanaman.setAttribute("class", "item-tanaman");
+          // itemTanaman.setAttribute("class", "item-tanaman");
           itemTanaman.innerHTML = `
-                  <h5 data-toggle="modal" data-target="#modal-${result.id}">${result.nama}</h5>
+                  <div class="col-md-4 col-12 mb-3">
+                    <div class="card" style="width:18rem; cursor: pointer;" data-toggle="modal" data-target="#modal-${
+                      result.id
+                    }">
+                      <img src="/src/img/${
+                        result.imgUrl
+                      }" class="card-img-top img-tanaman" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">${result.nama}</p>
+                      </div>
+                    </img>
+                  </div>
                   <!-- Modal -->
-                  <div class="modal fade" id="modal-${result.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="modal-${
+                    result.id
+                  }" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -41,10 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
                           </button>
                         </div>
                         <div class="modal-body">
-                        <img src="/src/img/${result.imgUrl}" class="card-img-top" alt="${result.name}">
+                        <img src="/src/img/${
+                          result.imgUrl
+                        }" class="card-img-top" alt="${result.name}">
                         <div class="card-body">
                           <p class="card-text">
-                            ${result.ramuan.reduce((acc, cv) => acc + "<br> <br>" + cv)}
+                            ${result.ramuan.reduce(
+                              (acc, cv) => acc + "<br> <br>" + cv
+                            )}
                           </p>
                         </div>
                         </div>    

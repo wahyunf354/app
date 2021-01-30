@@ -1,10 +1,10 @@
 import tanamans from "./data.js";
 
 function bruteForce(text, keyword) {
-  const arrText = text.split('');
-  const arrKeyword = keyword.split('');
+  const arrText = text.split("");
+  const arrKeyword = keyword.split("");
 
-  for(let i = 0; i < arrText.length; i++) {
+  for (let i = 0; i < arrText.length; i++) {
     let temp = [];
     for (let j = 0; j < arrKeyword.length; j++) {
       if (arrText[i + j] != arrKeyword[j]) {
@@ -14,28 +14,22 @@ function bruteForce(text, keyword) {
       }
     }
 
-    if(temp.length == arrKeyword.length) {
-      return true
+    if (temp.length == arrKeyword.length) {
+      return true;
     }
   }
-  return false
+  return false;
 }
 
 class DataSource {
-  static searchTanaman(keyword, berdasarkan) {
+  static searchTanaman(keyword) {
     return new Promise((resolve, reject) => {
       let filteredTanamans = [];
-      if (berdasarkan == 'penyakit') {
-        filteredTanamans = tanamans.filter(
+      filteredTanamans = tanamans.filter(
         (tanaman) =>
-          bruteForce(tanaman.khasiat.toUpperCase(), keyword.toUpperCase())
-        );
-      } else if (berdasarkan == 'tanaman') {
-        filteredTanamans = tanamans.filter(
-          (tanaman) =>
-            bruteForce(tanaman.nama.toUpperCase(), keyword.toUpperCase())
-        );
-      }
+          bruteForce(tanaman.khasiat.toUpperCase(), keyword.toUpperCase()) ||
+          bruteForce(tanaman.nama.toUpperCase(), keyword.toUpperCase())
+      );
 
       if (filteredTanamans.length) {
         resolve(filteredTanamans);

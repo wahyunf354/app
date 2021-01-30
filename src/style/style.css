@@ -38,6 +38,7 @@ header h2 {
 .title-jumbotron {
   font-size: 2.5rem;
   font-weight: 300;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 .title-jumbotron span {
@@ -53,6 +54,12 @@ header h2 {
   right: 0;
   left: 0;
   opacity: 0.15;
+}
+
+.img-tanaman {
+  width: 100%;
+  height: 200px;
+  object-fit: cover !important;
 }
 
 .item-tanaman {
