@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const onSearchButtonClicked = () => {
     const listTanaman = document.querySelector(".list-tanaman");
 
-    console.log(berdasarkan)
     DataSource.searchTanaman(searchElement.value, berdasarkan)
       .then((results) => {
         listTanaman.innerHTML = "";

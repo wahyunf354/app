@@ -46,6 +46,4 @@ class DataSource {
   }
 }
 
-console.log(bruteForce('ikan bakar', "ud"))
-
 export default DataSource;
