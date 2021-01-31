@@ -254,6 +254,127 @@ var tanamans = [
       "Luka terbakar dan tersiram air panas (yang ringan): Daun dicuci bersih, ambil bagian dalamnya, tempelkan pada bagian tubuh yang terkena api/air panas. c. Bisul: Daun dilumatkan ditambah sedikit garam, tempelkan pada bisulnya.",
     ],
   },
+  {
+    id: 14,
+    nama: "Awar­-awar",
+    namaLatin: "Ficus septicum Burm.b.",
+    imgUrl: "awar-awar.png",
+    khasiat: "Herpes, Sakit kepala, Rematik",
+    ramuan: [
+      "Ramuan untuk mengobati penyakit Dap, Dompo, Herpes, dari daun awar awar telah lama digunakan orang tua kita. Secara tradisional manfaat daun awar awar dapat dirasakan, menyembuhkan herpes atau dompo, sakit kepala dan rematik. Penderita dompo akan merasakan ruam yang kemudian berubah menjadi luka melepuh berisi air yang gatal, mirip seperti cacar air. dalam beberapa hari bintil berair ini akan mengering dan berubah menjadi koreng. tetapi adapula yang mengalami rasa nyeri tanpa ruam. ",
+      "Gejala umum ditandai dengan demam, sakit kepala, sangat sensitif terhadap cahaya, lelah dan tidak enak badan. Umumnya penyakit dompo atau herpes akan sembuh sendiri setelah 14 hingga 28 hari, tetapi rasa sakit terkadang tidak tertahankan. Lalu, bagaimana cara mengobati penyakit Dap, Dompo, atau Herpes?",
+      "Menurut studi, daun awar awar mengandung senyawa flavonoid, sterol, dan bermanfaat sebagai sudorik, diuretik, dan emetik. Adapun ramuan untuk mengobati penyakit Dap, Dompo, Herpes, dari daun awar adalah sebagai berikut:",
+      "Daun awar-awar segar secukupnya; Air secukupnya,Dipipis sampai berbentuk pasta, Dioleskan pada bagiankulit yang sakit, lakukan sehari tiga kali hingga sembuh.",
+    ],
+  },
+  {
+    id: 15,
+    nama: "Asam Jawa",
+    namaLatin: "Tamarindus indica Linn",
+    imgUrl: "asem-jawa.png",
+    khasiat: "Demam, Eksem",
+    ramuan: [
+      "Demam: Asam 2 ruas ibu jari; Air mendidih 100 ml, Diseduh, Diminum 1 kali sehari 100 ml",
+      "Eksem: Asam 1 ruas ibu jari; rimpang temulawak 4 keping; Air 110 ml, Diseduh, Diminum 1 kali sehari 110 ml Nyeri haid: Asam 1 ruas ibu jari; kunyit 1 jari; Air mendidih 100 ml, Diseduh, Diminum pagi dan sore, tiap kali minum 100 ml.",
+    ],
+  },
+  {
+    id: 16,
+    nama: "Anting Anting",
+    namaLatin: "Acalypha australis L",
+    imgUrl: "anting-anting.png",
+    khasiat:
+      "Disentri Amoeba, Batuk, mimisan dan berak darah, Obat untuk kuncing, Disentri Basiler, Pendarahan, Luka bakar",
+    ramuan: [
+      "Disentri Amoeba : Tanaman kering (seluruh batang) sekitar 30-60 gram direbus, air rebusan diminum 2 kali dan diulangi untuk 5-10 hari.",
+      `Batuk, mimisan dan berak darah :
+  Tanaman kering 30-60 gram, direbus dan diminum
+  setelah dingin.`,
+      `Obat untuk kucing :
+  Akar biasa dipakai obat oleh kucing secara naluriah.`,
+      `Pendarahan, Luka bakar :
+  Herba segar ditambah gula pasir secukupnya, dilumatkan
+  kemudian ditempel ketempat yang sakit.`,
+      `Disentri Basiler :
+  Tanaman kering 30-60 gram, ditambah portulaka 30
+  gram, gula 30 gram, direbus dan diminum setelah dingin.
+  7. Diare, muntah darah : Tanaman kering 30-60 gram,
+  direbus dan diminum setelah dingin.`,
+    ],
+  },
+  {
+    id: 17,
+    nama: "Andong",
+    namaLatin: "Cordyline fruticosa (L) A.Cheval",
+    imgUrl: "andong.png",
+    khasiat: "Hemostatik, Antibengkak, Batuk darah dan Haid terlalu banyak.",
+    ramuan: [
+      `KHASIAT/KEGUNAAN
+    Hemostatik, Antibengkak, Batuk darah dan Haid terlalu
+    banyak.`,
+      `RESEP/CARA PENGOLAHAN
+  Daun andong segar 5 helai; Air secukupnya, Dibuat infus,
+  diseduh atau dipipis, Diminum 1 kali sehari 100 ml. Untuk
+  pipisan diminum 1 kali sehari 1/4 cangkir.`,
+    ],
+  },
+  {
+    id: 18,
+    nama: "Adas",
+    namaLatin: "Foeniculum vulgare Mill",
+    imgUrl: "adas.png",
+    khasiat: "Sembelit, Batuk, Sakit Perut",
+    ramuan: [
+      `Sembelit:
+    Adas 3 butir; Daun muda jambu biji 3 lembar; Kulit ba-
+    tang pulosari 1/2 jari; air 2 cangkir; Ramuan direbus
+    hingga mendidih sampai diperoleh cairan 1 cangkir ke-
+    mudian disaring, Bayi umur 3 bulan: sehari minum 5-7
+    kali, tiap kali 1 sendok teh; Bayi umur 6 bulan: sehari
+    minum 3 kali, tiap kali 1 sendok makan; Anak umur 3
+    tahun: sehari minum 3 kali, tiap kali 2 sendok makan;
+    Remaja: sehari minum 1 kali, tiap kali 1 cangkir.`,
+      `Batuk:
+    Adas 3 butir; Gula batu secukupnya; Air secukupnya;
+    Daun sagamanis 7 lembar; Kulit batang pulosari 1 jari;
+    Bawang merah 1 buah, Campuran ditambah air sedikit,
+    lalu ditumbuk halus, kemudian dibungkus dengan daun pisang selanjutnya dikukus 15 menit, lalu diperas dengan
+    kain bersih, Diminum sekaligus sebelum tidur.`,
+      `Sakit perut:
+    Adas 5 butir; Ketumbar 11 biji; Merica bolong 11 biji;
+    Daun po’o segar 20 lembar; Air 2 cangkir; Kunyit 1/2 jari;
+    Lempuyang wangi dibakar 1 biji; Temu kunci dibakar 3
+    biji; Temu kunci segar 3 biji; Kayu ules 1 biji, Campuran
+    ditumbuk, kemudian dididihkan sampai memperoleh 1
+    cangkir, lalu disaring dengan kain bersih, Diminum sehari
+    2 kali.`,
+    ],
+  },
+  {
+    id: 19,
+    nama: "Bungur",
+    namaLatin: "Lagerstromeia speciosa Pers",
+    imgUrl: "bungur.png",
+    khasiat: "Kencing manis",
+    ramuan: [
+      `Kencing manis:
+    Daun bungur segar 8 g; Biji kacang hijau 9 g; Air 110 ml,
+    Dibuat infus, Diminum 1 kali sehari 100 ml.`,
+    ],
+  },
+  {
+    id: 20,
+    nama: "Bunga Pukul Empat",
+    namaLatin: "Mirabilis jalapa L",
+    imgUrl: "bunga-pukul-empat",
+    khasiat: "Radang amandel, Radang prostat",
+    ramuan: [
+      `Radang amandel, Radang prostat:
+    Akar bunga pukul empat segar 10 g; Air secukupnya,
+    Dibuat jus atau dipipis, Dikompreskan pada bagian yang
+    sakit.`,
+    ],
+  },
 ];
 
 export default tanamans;
