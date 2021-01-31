@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         result.imgUrl
                       }" class="card-img-top img-tanaman" alt="...">
                       <div class="card-body">
-                        <p class="card-text">${result.nama}</p>
+                        <h5 class="card-text">${result.nama}</h5>
                       </div>
                     </img>
                   </div>
