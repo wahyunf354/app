@@ -28,7 +28,7 @@
 			font-size: 10px;
 		}
 
-		header {
+		nav {
 			width: 100%;
 			background-color: white;
 			color: #799d47;
@@ -36,9 +36,10 @@
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		}
 
-		header h2 {
+		nav h2.navbar-brand {
 			margin: 0;
 			font-size: 1.5rem;
+			color: #799d47 !important;
 			padding: 16px;
 		}
 
@@ -64,14 +65,45 @@
 		.layer-black {
 			position: absolute;
 			background-color: black;
+		}
+
+		a.nav-link,
+		label,
+		.secondary-auth {
+			font-size: 1.5em;
+		}
+
+		.secondary-auth {
+			cursor: pointer;
+		}
 	</style>
 	<script type="module" src="/src/script/main.js"></script>
 </head>
 
 <body>
-	<header>
-		<h2>Cari Tanaman Obat</h2>
-	</header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<h2 class="navbar-brand" href="#" style="color: #799d47;">Cari Tanaman Obat</h2>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active d-none">
+					<a class="nav-link" href="#">Hi, Wahyu Nur Fadillah</a>
+				</li>
+				<li class="nav-item">
+					<a type="button" class="btn d-block mr-md-3 btn-sm btn-outline-success my-2 my-sm-0" data-toggle="modal"
+						data-target="#login">Login</a>
+				</li>
+				<li class="nav-item">
+					<a type="button" class="btn d-block btn-sm btn-success my-2 my-sm-0" data-toggle="modal"
+						data-target="#signup">Signup</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container" style="height: 100%">
 			<div style="height: 100%" class="row justify-content-center align-items-center">
@@ -91,6 +123,81 @@
 		<div id="list-tanaman" class="list-tanaman row justify-content-center">
 		</div>
 	</div>
+
+
+	<!-- Modal Signup-->
+	<div class="modal fade" id="signup" tabindex="-1" aria-labelledby="sigupLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title title-modal" id="sigupLabel">Sign up</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="name">Nama</label>
+						<input type="name" name="name" required id="input-name-signup" class="form-control" id="name"
+							aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" required name="email" id="input-email-signup" class="form-control" id="email"
+							aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" required name="password" class="form-control" id="input-password-signup">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a id="btn-signup" class="btn btn-sm btn-outline-success">Sign up</a>
+					<a class="text-success secondary-auth" data-dismiss="modal" data-toggle="modal" data-target="#login">Log
+						in</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Login-->
+	<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title title-modal" id="loginLabel">Log in</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input required type="email" name="email" id="input-email-login" class="form-control" id="email"
+							aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input required type="password" name="password" class="form-control" id="input-password-login">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a id="btn-login" class="btn btn-sm btn-outline-success">Log in</a>
+					<a class="text-success secondary-auth" data-toggle="modal" data-target="#signup" data-dismiss="modal">Sign
+						up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
 	<!-- jQuery and JS bundle w/ Popper.js -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -98,6 +205,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 		crossorigin="anonymous"></script>
+
+	<script type="module" src="src/script/firebase.js"></script>
 </body>
 
 </html>
