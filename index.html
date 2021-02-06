@@ -73,11 +73,14 @@
 			font-size: 1.2em;
 		}
 
+		.dropdown-item {
+			font-size: 1em;
+		}
+
 		.secondary-auth {
 			cursor: pointer;
 		}
 	</style>
-	<script type="module" src="/src/script/main.js"></script>
 </head>
 
 <body>
@@ -90,14 +93,20 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active d-none">
-					<a class="nav-link" href="#">Hi, Wahyu Nur Fadillah</a>
+				<li id="link-user-home" class="nav-item active dropdown d-none">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Hi, Wahyu Nur Fadillah</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" data-toggle="modal" data-target="#tambah-tanaman">Tambah Tanaman?</a>
+						<div class="dropdown-divider"></div>
+						<a id="btn-logout" class="dropdown-item">Loguot</a>
+					</div>
 				</li>
-				<li class="nav-item">
+				<li id="link-login-home" class="nav-item">
 					<a type="button" class="btn d-block mr-md-3 btn-sm btn-outline-success my-2 my-sm-0" data-toggle="modal"
 						data-target="#login">Login</a>
 				</li>
-				<li class="nav-item">
+				<li id="link-signup-home" class="nav-item">
 					<a type="button" class="btn d-block btn-sm btn-success my-2 my-sm-0" data-toggle="modal"
 						data-target="#signup">Signup</a>
 				</li>
@@ -157,6 +166,7 @@
 				</div>
 				<div class="modal-footer">
 					<a id="btn-signup" class="btn btn-sm btn-outline-success">Sign up</a>
+					<a id="btn-loading-signup" class="btn btn-sm btn-secondary d-none">Loading</a>
 					<a class="text-success secondary-auth" data-dismiss="modal" data-toggle="modal" data-target="#login">Log
 						in</a>
 				</div>
@@ -170,7 +180,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title title-modal" id="loginLabel">Log in</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<button type="button" class="close login-close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -187,12 +197,35 @@
 				</div>
 				<div class="modal-footer">
 					<button type="submit" id="btn-login" class="btn btn-sm btn-outline-success">Log in</button>
+					<a id="btn-loading-login" class="btn btn-sm btn-secondary d-none">Loading</a>
 					<a class="text-success secondary-auth" data-toggle="modal" data-target="#signup" data-dismiss="modal">Sign
 						up</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Modal tambahn tanaman -->
+	<div class="modal fade" id="tambah-tanaman" tabindex="-1" aria-labelledby="tambah-tanamanLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="tambah-tanamanLabel">Tambah Tanaman</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- add tambah form -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 
@@ -211,7 +244,8 @@
 		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 		crossorigin="anonymous"></script>
 
-	<script src="src/script/firebase/index.js"></script>
+	<script type="module" src="src/script/firebase.js"></script>
+	<script type="module" src="/src/script/main.js"></script>
 </body>
 
 </html>

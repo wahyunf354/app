@@ -35,6 +35,9 @@ Ikuti langkah-langkah berikut
 - [x] Menampilkan data pada Layout
 - [x] Menerapkan Algoritma Brute Force
 - [ ] Menambah tanaman
-- [ ] Menyimpan data user ke firestore
-- [ ] Memberi pemberitahuhan sudah login
-- [ ] Memberi pemberitahuhan sudah sigup
+- [x] Menyimpan data user ke firestore
+- [x] Memberi pemberitahuhan sudah login
+- [x] Memberi pemberitahuhan sudah sigup
+- [ ] Memperbaiki tanaman collection dengan menambah author
+- [ ] insert data to collection tanaman
+- [ ] membuat form untuk tambah tanaman

@@ -1,7 +1,6 @@
 import DataSource from "./data-source.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const searchButton = document.querySelector("#searchButtonElement");
   const searchElement = document.querySelector("#searchElement");
 
   const onSearchButtonClicked = () => {
