@@ -64,5 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   searchElement.addEventListener("keyup", onSearchButtonClicked);
-  searchButton.addEventListener("click", onSearchButtonClicked);
+  // searchButton.addEventListener("click", onSearchButtonClicked);
 });

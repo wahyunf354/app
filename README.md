@@ -32,5 +32,9 @@ Ikuti langkah-langkah berikut
 - [x] Menambahkan data lebih banya lagi
 - [x] Pembuatan Layout Tampilan Aplikasi
 - [x] Menambah data
-- [ ] Menampilkan data pada Layout
+- [x] Menampilkan data pada Layout
 - [x] Menerapkan Algoritma Brute Force
+- [ ] Menambah tanaman
+- [ ] Menyimpan data user ke firestore
+- [ ] Memberi pemberitahuhan sudah login
+- [ ] Memberi pemberitahuhan sudah sigup

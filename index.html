@@ -25,7 +25,7 @@
 			margin: 0;
 			font-family: sans-serif;
 			padding: 0;
-			font-size: 10px;
+			font-size: 12px;
 		}
 
 		nav {
@@ -70,7 +70,7 @@
 		a.nav-link,
 		label,
 		.secondary-auth {
-			font-size: 1.5em;
+			font-size: 1.2em;
 		}
 
 		.secondary-auth {
@@ -149,6 +149,10 @@
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" required name="password" class="form-control" id="input-password-signup">
+						<small id="passwordHelpBlock" class="form-text text-muted">
+							Your password must be 6-20 characters long, contain letters and numbers, and must not contain spaces,
+							special characters, or emoji.
+						</small>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -182,7 +186,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<a id="btn-login" class="btn btn-sm btn-outline-success">Log in</a>
+					<button type="submit" id="btn-login" class="btn btn-sm btn-outline-success">Log in</button>
 					<a class="text-success secondary-auth" data-toggle="modal" data-target="#signup" data-dismiss="modal">Sign
 						up</a>
 				</div>
@@ -197,6 +201,7 @@
 
 	<!-- Add Firebase products that you want to use -->
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
 	<!-- jQuery and JS bundle w/ Popper.js -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -206,7 +211,7 @@
 		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 		crossorigin="anonymous"></script>
 
-	<script type="module" src="src/script/firebase.js"></script>
+	<script src="src/script/firebase/index.js"></script>
 </body>
 
 </html>
