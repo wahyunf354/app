@@ -1,8 +1,8 @@
 import DataSource from "./data-source.js";
+import { getUserByUid } from "./helper.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchElement = document.querySelector("#searchElement");
-
   const onSearchButtonClicked = () => {
     const listTanaman = document.querySelector(".list-tanaman");
 
@@ -18,11 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="card" style="width:18rem; cursor: pointer;" data-toggle="modal" data-target="#modal-${
                       result.id
                     }">
-                      <img src="/src/img/${
+                      <img src="${
                         result.imgUrl
                       }" class="card-img-top img-tanaman" alt="...">
                       <div class="card-body">
                         <h5 class="card-text">${result.nama}</h5>
+                        <p class="card-text text-secondary">by ${
+                          result.author || "anonimus"
+                        }</p>
                       </div>
                     </img>
                   </div>
@@ -39,13 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
                           </button>
                         </div>
                         <div class="modal-body">
-                        <img src="/src/img/${
-                          result.imgUrl
-                        }" class="card-img-top" alt="${result.name}">
+                        <img src="${result.imgUrl}" class="card-img-top" alt="${
+            result.nama
+          }">
                         <div class="card-body">
                           <p class="card-text">
                             ${result.ramuan.reduce(
-                              (acc, cv) => acc + "<br> <br>" + cv
+                              (acc, cv) => acc + "<br>" + cv
                             )}
                           </p>
                         </div>

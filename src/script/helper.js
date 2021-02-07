@@ -5,7 +5,6 @@ function getUserByUid(db, uid) {
       .get()
       .then((result) => {
         result.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
           resolve(doc.data());
         });
       })

@@ -1,28 +1,20 @@
-import tanamans from "./data.js";
+// import tanamans from "./data.js";
+
+import { getUserByUid } from "./helper.js";
 
 const db = firebase.firestore();
-function getAllTanaman() {
-  return new Promise((resolve, reject) => {
-    db.collection("tanaman")
-      .get()
-      .then((result) => {
-        const data = [];
-        result.forEach((doc) => {
-          console.log(`${doc.id} => `, doc.data());
-          data.push({ id: doc.id, ...doc.data() });
-        });
-        resolve(data);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
+async function getAllTanaman() {
+  try {
+    const data = [];
+    const tanamans = await db.collection("tanaman").get();
+    tanamans.forEach((doc) => {
+      data.push({ id: doc.id, ...doc.data() });
+    });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
-
-(async function () {
-  const obat = await getAllTanaman();
-  console.log(obat);
-})();
 
 function bruteForce(text, keyword) {
   const arrText = text.split("");
@@ -46,7 +38,8 @@ function bruteForce(text, keyword) {
 }
 
 class DataSource {
-  static searchTanaman(keyword) {
+  static async searchTanaman(keyword) {
+    const tanamans = await getAllTanaman();
     return new Promise((resolve, reject) => {
       let filteredTanamans = [];
       filteredTanamans = tanamans.filter(
@@ -54,7 +47,6 @@ class DataSource {
           bruteForce(tanaman.khasiat.toUpperCase(), keyword.toUpperCase()) ||
           bruteForce(tanaman.nama.toUpperCase(), keyword.toUpperCase())
       );
-
       if (filteredTanamans.length) {
         resolve(filteredTanamans);
       } else {

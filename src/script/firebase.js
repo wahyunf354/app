@@ -100,6 +100,8 @@ const eventSaveTanaman = async () => {
   btnSaveTanaman.classList.add("d-none");
   btnLoadingSave.classList.remove("d-none");
   try {
+    const uid = getCookie("uid");
+    const user = await getUserByUid(db, uid);
     const img = await upload(imgBtn);
     const docRef = await db.collection("tanaman").add({
       imgUrl: img,
@@ -107,7 +109,8 @@ const eventSaveTanaman = async () => {
       nama: nameTanaman.value,
       namaLatin: nameLatin.value,
       ramuan: ramuan.value.split("\n"),
-      uid: getCookie("uid"),
+      uid,
+      author: user.name,
     });
     console.log("Document written with ID: ", docRef.id);
     btnSaveTanaman.classList.remove("d-none");
