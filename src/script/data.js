@@ -366,7 +366,7 @@ var tanamans = [
     id: 20,
     nama: "Bunga Pukul Empat",
     namaLatin: "Mirabilis jalapa L",
-    imgUrl: "bunga-pukul-empat",
+    imgUrl: "bunga-pukul-empat.png",
     khasiat: "Radang amandel, Radang prostat",
     ramuan: [
       `Radang amandel, Radang prostat:

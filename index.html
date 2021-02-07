@@ -103,8 +103,8 @@
 					</div>
 				</li>
 				<li id="link-login-home" class="nav-item">
-					<a type="button" class="btn d-block mr-md-3 btn-sm btn-outline-success my-2 my-sm-0" data-toggle="modal"
-						data-target="#login">Login</a>
+					<a type="button" class="btn d-block mr-md-3 btn-sm btn-outline-success mb-md-2 my-2 my-sm-0"
+						data-toggle="modal" data-target="#login">Login</a>
 				</li>
 				<li id="link-signup-home" class="nav-item">
 					<a type="button" class="btn d-block btn-sm btn-success my-2 my-sm-0" data-toggle="modal"
@@ -132,7 +132,6 @@
 		<div id="list-tanaman" class="list-tanaman row justify-content-center">
 		</div>
 	</div>
-
 
 	<!-- Modal Signup-->
 	<div class="modal fade" id="signup" tabindex="-1" aria-labelledby="sigupLabel" aria-hidden="true">
@@ -166,7 +165,11 @@
 				</div>
 				<div class="modal-footer">
 					<a id="btn-signup" class="btn btn-sm btn-outline-success">Sign up</a>
-					<a id="btn-loading-signup" class="btn btn-sm btn-secondary d-none">Loading</a>
+					<a id="btn-loading-signup" class="btn btn-sm btn-secondary d-none">
+						<div class="spinner-border spinner-border-sm mx-2" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</a>
 					<a class="text-success secondary-auth" data-dismiss="modal" data-toggle="modal" data-target="#login">Log
 						in</a>
 				</div>
@@ -197,7 +200,11 @@
 				</div>
 				<div class="modal-footer">
 					<button type="submit" id="btn-login" class="btn btn-sm btn-outline-success">Log in</button>
-					<a id="btn-loading-login" class="btn btn-sm btn-secondary d-none">Loading</a>
+					<a id="btn-loading-login" class="btn btn-sm btn-secondary d-none">
+						<div class="spinner-border spinner-border-sm mx-2" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</a>
 					<a class="text-success secondary-auth" data-toggle="modal" data-target="#signup" data-dismiss="modal">Sign
 						up</a>
 				</div>
@@ -216,10 +223,40 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<!-- add tambah form -->
+
+					<div class="form-group">
+						<label for="nama-tanaman">Nama Tanaman</label>
+						<input type="text" class="form-control" id="nama-tanaman">
+					</div>
+
+					<div class="form-group">
+						<label for="nama-latin">Nama Latin</label>
+						<input type="text" class="form-control" id="nama-latin">
+					</div>
+
+					<div class="form-group">
+						<label for="khasiat">Khasiat</label>
+						<input type="text" class="form-control" id="khasiat">
+					</div>
+
+					<div class="form-group">
+						<label for="img-url">Image</label>
+						<input type="file" class="form-control-file" id="img-url">
+					</div>
+
+					<div class="form-group">
+						<label for="ramuan">Ramuan</label>
+						<textarea cols="10" rows="3" type="text" class="form-control" id="ramuan"></textarea>
+					</div>
+
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save</button>
+					<button type="button" id="btn-save" class="btn btn-outline-success btn-sm">Save</button>
+					<button type="button" id="btn-loading-save" class="btn btn-secondary btn-sm d-none">
+						<div class="spinner-border spinner-border-sm mx-2" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -235,6 +272,7 @@
 	<!-- Add Firebase products that you want to use -->
 	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
 
 	<!-- jQuery and JS bundle w/ Popper.js -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

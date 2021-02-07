@@ -16,6 +16,8 @@ firebase.analytics();
 const auth = firebase.auth();
 // firestore
 const db = firebase.firestore();
+// storage
+const storage = firebase.storage();
 
 // Sign up
 const btnSignUp = document.getElementById("btn-signup");
@@ -29,17 +31,20 @@ const passwordLogin = document.getElementById("input-password-login");
 // loading
 const btnLoadingSign = document.getElementById("btn-loading-signup");
 const btnLoadingLogin = document.getElementById("btn-loading-login");
+const btnLoadingSave = document.getElementById("btn-loading-save");
 // home
 const btnLoginHome = document.getElementById("link-login-home");
 const btnSignUpHome = document.getElementById("link-signup-home");
 const helloUser = document.getElementById("link-user-home");
 // button logout
 const btnLogout = document.getElementById("btn-logout");
-btnLogout.addEventListener("click", (e) => {
-  e.preventDefault();
-  setCookie("uid", "", 1);
-  location.reload(true);
-});
+// tambah data
+const nameTanaman = document.getElementById("nama-tanaman");
+const nameLatin = document.getElementById("nama-latin");
+const khasiat = document.getElementById("khasiat");
+const imgBtn = document.getElementById("img-url");
+const ramuan = document.getElementById("ramuan");
+const btnSaveTanaman = document.getElementById("btn-save");
 
 // check jika cookies ada
 const uid = getCookie("uid");
@@ -50,8 +55,76 @@ const uid = getCookie("uid");
   }
 })();
 
+const upload = (e) => {
+  const file = e.files[0];
+  // generate new file name
+  const newName = Math.random().toString().substr(2, 12);
+  // get extention file
+  const nameFileArray = file.name.split(".");
+  const extentionFile = nameFileArray[nameFileArray.length - 1];
+  // upload to store
+  const storageRef = storage.ref("tanaman/" + newName + "." + extentionFile);
+  const uploadTask = storageRef.put(file);
+  // to get url
+  return new Promise((resolve, reject) => {
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log("Upload is " + progress + "% done");
+      },
+      (error) => {
+        reject(error);
+      },
+      () => {
+        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+          resolve(downloadURL);
+        });
+      }
+    );
+  });
+};
+
+btnSaveTanaman.addEventListener("click", () => eventSaveTanaman());
 btnSignUp.addEventListener("click", (e) => eventSignup(e));
 btnLogin.addEventListener("click", (e) => eventLogin(e));
+btnLogout.addEventListener("click", (e) => {
+  e.preventDefault();
+  setCookie("uid", "", 1);
+  location.reload(true);
+});
+
+// save tanaman
+const eventSaveTanaman = async () => {
+  btnSaveTanaman.classList.add("d-none");
+  btnLoadingSave.classList.remove("d-none");
+  try {
+    const img = await upload(imgBtn);
+    const docRef = await db.collection("tanaman").add({
+      imgUrl: img,
+      khasiat: khasiat.value,
+      nama: nameTanaman.value,
+      namaLatin: nameLatin.value,
+      ramuan: ramuan.value.split("\n"),
+      uid: getCookie("uid"),
+    });
+    console.log("Document written with ID: ", docRef.id);
+    btnSaveTanaman.classList.remove("d-none");
+    btnLoadingSave.classList.add("d-none");
+    alert("Data berhasil ditambahkan");
+    khasiat.value = "";
+    nameTanaman.value = "";
+    nameLatin.value = "";
+    ramuan.value = "";
+    imgBtn.value = "";
+  } catch (err) {
+    console.log("Error adding document: ", err);
+    alert("Error: ", err);
+    btnSaveTanaman.classList.remove("d-none");
+    btnLoadingSave.classList.add("d-none");
+  }
+};
 
 // Signup function
 const eventSignup = (e) => {
