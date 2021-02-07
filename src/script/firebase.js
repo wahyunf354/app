@@ -45,7 +45,7 @@ const khasiat = document.getElementById("khasiat");
 const imgBtn = document.getElementById("img-url");
 const ramuan = document.getElementById("ramuan");
 const btnSaveTanaman = document.getElementById("btn-save");
-
+const progressBar = document.getElementById("progress-bar");
 // check jika cookies ada
 const uid = getCookie("uid");
 (async function () {
@@ -73,6 +73,7 @@ const upload = (e) => {
         const progress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log("Upload is " + progress + "% done");
+        progressBar.style.width = progress + "%";
       },
       (error) => {
         reject(error);
@@ -132,7 +133,6 @@ const eventSaveTanaman = async () => {
 // Signup function
 const eventSignup = (e) => {
   e.preventDefault();
-  console.log("hit ni");
   btnLoadingSign.classList.remove("d-none");
   btnSignUp.classList.add("d-none");
   auth
@@ -143,7 +143,7 @@ const eventSignup = (e) => {
         email: result.user.email,
         uid: result.user.uid,
       });
-      console.log(result);
+      setCookie("uid", result.user.uid, 1);
     })
     .then(() => {
       btnLoadingSign.classList.add("d-none");
@@ -168,7 +168,6 @@ const errorSignup = (error) => {
 // login function
 const eventLogin = (e) => {
   e.preventDefault();
-  console.log("hit ni login");
 
   btnLoadingLogin.classList.remove("d-none");
   btnLogin.classList.add("d-none");
@@ -182,8 +181,6 @@ const eventLogin = (e) => {
 const successLogin = async (result) => {
   btnLoadingLogin.classList.add("d-none");
   btnLogin.classList.remove("d-none");
-  console.log("proses loading...");
-  console.log(result);
   alert("Berhasil Login");
 
   const dataUser = await getUserByUid(db, result.user.uid);
@@ -204,7 +201,6 @@ const errorLogin = (error) => {
 
 function changeHelloUserLogin(name) {
   const nameEl = helloUser.children[0];
-  console.log(nameEl);
   nameEl.innerHTML = "Hi, " + name;
   btnLoginHome.classList.toggle("d-none");
   btnSignUpHome.classList.toggle("d-none");

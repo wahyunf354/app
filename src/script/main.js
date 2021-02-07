@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
             result.nama
           }">
                         <div class="card-body">
-                          <p class="card-text">
+                          <p class="card-text ramuan">
                             ${result.ramuan.reduce(
                               (acc, cv) => acc + "<br>" + cv
                             )}

@@ -34,10 +34,16 @@ Ikuti langkah-langkah berikut
 - [x] Menambah data
 - [x] Menampilkan data pada Layout
 - [x] Menerapkan Algoritma Brute Force
-- [ ] Menambah tanaman
+- [x] Menambah tanaman
 - [x] Menyimpan data user ke firestore
 - [x] Memberi pemberitahuhan sudah login
 - [x] Memberi pemberitahuhan sudah sigup
-- [ ] Memperbaiki tanaman collection dengan menambah author
-- [ ] insert data to collection tanaman
-- [ ] membuat form untuk tambah tanaman
+- [x] Memperbaiki tanaman collection dengan menambah author
+- [x] insert data to collection tanaman
+- [x] membuat form untuk tambah tanaman
+- [x] miss dropdown user hello
+- [x] form sign up tidak mau close
+- [x] input ramuan dilebarkan dan modal diganti ke large
+- [x] font ramuan terlalu kecil
+- [x] bugs di signup yang tidak mau set cookie
+- [ ] font url diubah ke link
